@@ -8,6 +8,7 @@ redirect_from:
 ---
 
 {% include base_path %}
+
 [Curriculum Vitae [PDF]](https://github.com/jungijang/jungijang.github.io/blob/master/files/cv_JunGiJang.pdf)
 
 Education
