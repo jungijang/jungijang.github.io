@@ -5,7 +5,6 @@ permalink: /publication/2018-10-23-paper-title-number-1
 excerpt: '[\[Paper\]](https://datalab.snu.ac.kr/~ukang/papers/zoomsvdCIKM18.pdf)'
 date: 2018-10-23
 venue: 'ACM International Conference on Information and Knowledge Management (CIKM)'
-paperurl: 'https://datalab.snu.ac.kr/~ukang/papers/zoomsvdCIKM18.pdf'
 ---
 
 [Paper](https://datalab.snu.ac.kr/~ukang/papers/zoomsvdCIKM18.pdf)
