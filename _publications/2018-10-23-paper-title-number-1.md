@@ -1,9 +1,13 @@
 ---
-title: "Zoom-SVD: Fast and Memory Efficient Method for Extracting Key Patterns in an Arbitrary Time Range."
+title: "Zoom-SVD: Fast and Memory Efficient Method for Extracting Key Patterns in an Arbitrary Time Range"
 collection: publications
 permalink: /publication/2018-10-23-paper-title-number-1
 excerpt: ''
 date: 2018-10-23
 venue: 'ACM International Conference on Information and Knowledge Management (CIKM)'
-paperurl: '[Paper](https://datalab.snu.ac.kr/~ukang/papers/zoomsvdCIKM18.pdf)'
+paperurl: 'https://datalab.snu.ac.kr/~ukang/papers/zoomsvdCIKM18.pdf'
 ---
+
+[Paper](https://datalab.snu.ac.kr/~ukang/papers/zoomsvdCIKM18.pdf)
+
+Recommended citation: Jun-gi Jang, Dongjin Choi, Jinhong Jung, and U Kang. (2018). "Zoom-SVD: Fast and Memory Efficient Method for Extracting Key Patterns in an Arbitrary Time Range." <i>ACM International Conference on Information and Knowledge Management (CIKM)</i>.
