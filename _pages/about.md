@@ -49,3 +49,28 @@ Efficient Tensor Analysis, Time Series Analysis
 
 * **Humantech Paper Award, Honorable Mention** (Feb. 2018).  
   Samsung Electronics
+
+## Professional Services
+
+### Conference Reviews
+* **CIKM** (International Conference on Information and Knowledge Management) (2018, 2019)
+* **ICDM** (International Conference on Data Mining) (2018)
+* **KDD** (International Conference on Knowledge Discovery and Data Mining) (2019)
+* **WWW** (International World Wide Web Conference) (2019)
+* **WSDM** (International Conference on Web Search and Data Mining) (2018, 2019)
+
+## Teaching Experiences
+
+### Teaching Assistant
+* M2177.004900 **Theory and Lab of IoT, AI, and Big Data** (Fall 2019)   
+  Seoul National University
+* M2177.004900 **Theory and Lab of IoT, AI, and Big Data** (Spring 2019)   
+  Seoul National University
+* M1522.001400 **Introduction to Data Mining** (Spring 2018)   
+  Seoul National University  
+* M1522.000900 **Data Structure** (Fall 2017)  
+  Seoul National University  
+
+## Invited Talks
+* **Zoom-SVD: Fast and Memory Efficient Method for Extracting Key Patterns in an Arbitrary Time Range**   
+  NC Soft, Jan. 2019
