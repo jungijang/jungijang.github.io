@@ -33,7 +33,7 @@ Efficient Tensor Analysis, Time Series Analysis
 * **S3CMTF: Fast, accurate, and scalable method for incomplete coupled matrix-tensor factorization.**  
   Dongjin Choi, **Jun-Gi Jang**, and U Kang.  
   PLOS ONE 14(6): e0217316.  
-  [\[PAPER\]](https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0217316&type=printable) [\[BIBTEX\]](https://datalab.snu.ac.kr/~ukang/papers/s3cmtfPLOS19.bib) [\[HOMEPAGE\]](https://datalab.snu.ac.kr/S3CMTF/)
+  [\[paper\]](https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0217316&type=printable) [\[bibtex\]](https://datalab.snu.ac.kr/~ukang/papers/s3cmtfPLOS19.bib) [\[homepage\]](https://datalab.snu.ac.kr/S3CMTF/)
 
 * **High-Performance Tucker Factorization on Heterogeneous Platforms.**  
   Sejoon Oh, Namyong Park, **Jun-Gi Jang**, Lee Sael, and U Kang.  
