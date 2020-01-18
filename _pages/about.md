@@ -30,7 +30,7 @@ Efficient Tensor Analysis, Time Series Analysis
 
 ## Publications
 
-:  Zoom-SVD: Fast and Memory Efficient Method for Extracting Key Patterns in an Arbitrary Time Range.  
-:  Jun-Gi Jang, Dongjin Choi, Jinhong Jung, and U Kang.  
-:  ACM International Conference on Information and Knowledge Management (CIKM) 2018, Lingotto, Turin, Italy.  
-:  [\[PAPER\]](https://datalab.snu.ac.kr/~ukang/papers/zoomsvdCIKM18.pdf) [\[BIBTEX\]](https://datalab.snu.ac.kr/~ukang/papers/zoomsvdCIKM18.bib) [\[HOMEPAGE\]](https://datalab.snu.ac.kr/zoomsvd/)
+> Zoom-SVD: Fast and Memory Efficient Method for Extracting Key Patterns in an Arbitrary Time Range.  
+> Jun-Gi Jang, Dongjin Choi, Jinhong Jung, and U Kang.  
+> ACM International Conference on Information and Knowledge Management (CIKM) 2018, Lingotto, Turin, Italy.  
+> [\[PAPER\]](https://datalab.snu.ac.kr/~ukang/papers/zoomsvdCIKM18.pdf) [\[BIBTEX\]](https://datalab.snu.ac.kr/~ukang/papers/zoomsvdCIKM18.bib) [\[HOMEPAGE\]](https://datalab.snu.ac.kr/zoomsvd/)
