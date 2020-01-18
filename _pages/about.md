@@ -53,11 +53,11 @@ Efficient Tensor Analysis, Time Series Analysis
 ## Professional Services
 
 ### Conference Reviews
-* **CIKM** (International Conference on Information and Knowledge Management) (2018, 2019)
-* **ICDM** (International Conference on Data Mining) (2018)
-* **KDD** (International Conference on Knowledge Discovery and Data Mining) (2019)
-* **WWW** (International World Wide Web Conference) (2019)
-* **WSDM** (International Conference on Web Search and Data Mining) (2018, 2019)
+* **CIKM** (International Conference on Information and Knowledge Management) \[2018, 2019\]
+* **ICDM** (International Conference on Data Mining) \[2018\]
+* **KDD** (International Conference on Knowledge Discovery and Data Mining) \[2019\]
+* **WWW** (International World Wide Web Conference) \[2019)\]
+* **WSDM** (International Conference on Web Search and Data Mining) \[2018, 2019\]
 
 ## Teaching Experiences
 
