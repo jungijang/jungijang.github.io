@@ -38,12 +38,12 @@ Efficient Tensor Analysis, Time Series Analysis
 * **High-Performance Tucker Factorization on Heterogeneous Platforms.**  
   Sejoon Oh, Namyong Park, **Jun-Gi Jang**, Lee Sael, and U Kang.  
   IEEE Transactions on Parallel and Distributed Systems (TPDS), Apr. 1, 2019.  
-  [\[PAPER\]](https://github.com/sejoonoh/sejoonoh.github.io/blob/master/files/GTA_paper.pdf) [\[BIBTEX\]](https://github.com/sejoonoh/sejoonoh.github.io/blob/master/files/GTA.bib) [\[CODE\]](https://github.com/sejoonoh/GTA-Tensor)
+  [\[paper\]](https://github.com/sejoonoh/sejoonoh.github.io/blob/master/files/GTA_paper.pdf) [\[bibtex\]](https://github.com/sejoonoh/sejoonoh.github.io/blob/master/files/GTA.bib) [\[code\]](https://github.com/sejoonoh/GTA-Tensor)
 
 * **Zoom-SVD: Fast and Memory Efficient Method for Extracting Key Patterns in an Arbitrary Time Range.**   
   **Jun-Gi Jang**, Dongjin Choi, Jinhong Jung, and U Kang.  
   ACM International Conference on Information and Knowledge Management (CIKM) 2018, Lingotto, Turin, Italy.  
-  [\[PAPER\]](https://datalab.snu.ac.kr/~ukang/papers/zoomsvdCIKM18.pdf) [\[BIBTEX\]](https://datalab.snu.ac.kr/~ukang/papers/zoomsvdCIKM18.bib) [\[HOMEPAGE\]](https://datalab.snu.ac.kr/zoomsvd/)
+  [\[paper\]](https://datalab.snu.ac.kr/~ukang/papers/zoomsvdCIKM18.pdf) [\[bibtex\]](https://datalab.snu.ac.kr/~ukang/papers/zoomsvdCIKM18.bib) [\[homepage\]](https://datalab.snu.ac.kr/zoomsvd/)
   
 ## Awards & Honors
 
