@@ -47,5 +47,5 @@ Efficient Tensor Analysis, Time Series Analysis
   
 ## Awards & Honors
 
-* **Humantech Paper Award, Honorable Mention** (Feb. 2018) . 
+* **Humantech Paper Award, Honorable Mention** (Feb. 2018).  
   Samsung Electronics
