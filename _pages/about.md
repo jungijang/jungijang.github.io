@@ -16,7 +16,7 @@ Efficient Tensor Analysis, Time Series Analysis
 
 ## Education
 
-* **M.S. & Ph.D student** (Mar. 2017 - Present)  
+* **M.S. & Ph.D. student** (Mar. 2017 - Present)  
     Computer Science and Engineering  
     Seoul National University
 
