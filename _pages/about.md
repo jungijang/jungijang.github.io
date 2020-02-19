@@ -63,6 +63,8 @@ Efficient Tensor Analysis, Time Series Analysis
 ## Teaching Experiences
 
 ### Teaching Assistant
+* M2177.004900 **Theory and Lab of IoT, AI, and Big Data** (Spring 2020)   
+  Seoul National University
 * M2177.004900 **Theory and Lab of IoT, AI, and Big Data** (Fall 2019)   
   Seoul National University
 * M2177.004900 **Theory and Lab of IoT, AI, and Big Data** (Spring 2019)   
