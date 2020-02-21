@@ -26,21 +26,21 @@ Efficient Tensor Analysis, Time Series Analysis
 
 ## Publications
 
-[C2] **D-Tucker: Fast and Memory-Efficient Tucker Decomposition for Dense Tensors.**
+\[C2\] **D-Tucker: Fast and Memory-Efficient Tucker Decomposition for Dense Tensors.**
 **Jun-Gi Jang** and U Kang.
 36th IEEE International Conference on Data Engineering ([ICDE](https://www.utdallas.edu/icde/)) 2020, Dallas, Texas, USA. (To appear)
 
-[J2] **S3CMTF: Fast, accurate, and scalable method for incomplete coupled matrix-tensor factorization.**
+\[J2\] **S3CMTF: Fast, accurate, and scalable method for incomplete coupled matrix-tensor factorization.**
 Dongjin Choi, **Jun-Gi Jang**, and U Kang.
 PLOS ONE 14(6): e0217316.
 [[paper]](https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0217316&type=printable) [[bibtex]](https://datalab.snu.ac.kr/~ukang/papers/s3cmtfPLOS19.bib) [[homepage]](https://datalab.snu.ac.kr/S3CMTF/)
 
-[J1] **High-Performance Tucker Factorization on Heterogeneous Platforms.**
+\[J1\] **High-Performance Tucker Factorization on Heterogeneous Platforms.**
 Sejoon Oh, Namyong Park, **Jun-Gi Jang**, Lee Sael, and U Kang.
 IEEE Transactions on Parallel and Distributed Systems (TPDS), Apr. 1, 2019.
 [[paper]](https://github.com/sejoonoh/sejoonoh.github.io/blob/master/files/GTA_paper.pdf) [[bibtex]](https://github.com/sejoonoh/sejoonoh.github.io/blob/master/files/GTA.bib) [[code]](https://github.com/sejoonoh/GTA-Tensor)
 
-[C1] **Zoom-SVD: Fast and Memory Efficient Method for Extracting Key Patterns in an Arbitrary Time Range.**
+\[C1\] **Zoom-SVD: Fast and Memory Efficient Method for Extracting Key Patterns in an Arbitrary Time Range.**
 **Jun-Gi Jang**, Dongjin Choi, Jinhong Jung, and U Kang.
 ACM International Conference on Information and Knowledge Management (CIKM) 2018, Lingotto, Turin, Italy.
 [[paper]](https://datalab.snu.ac.kr/~ukang/papers/zoomsvdCIKM18.pdf) [[bibtex]](https://datalab.snu.ac.kr/~ukang/papers/zoomsvdCIKM18.bib) [[homepage]](https://datalab.snu.ac.kr/zoomsvd/)
