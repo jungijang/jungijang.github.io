@@ -26,7 +26,7 @@ Efficient Tensor Analysis, Time Series Analysis
 
 ## Publications
 
-\[C2\] * **D-Tucker: Fast and Memory-Efficient Tucker Decomposition for Dense Tensors.**   
+\[C2\] - **D-Tucker: Fast and Memory-Efficient Tucker Decomposition for Dense Tensors.**   
        **Jun-Gi Jang** and U Kang.  
        36th IEEE International Conference on Data Engineering ([ICDE](https://www.utdallas.edu/icde/)) 2020, Dallas, Texas, USA. (To appear)
 
