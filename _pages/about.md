@@ -24,7 +24,6 @@ Efficient Tensor Analysis, Time Series Analysis
     Mechanical & Aerospace Engineering  
     Seoul National University
 
-
 ## Publications
 
 * **D-Tucker: Fast and Memory-Efficient Tucker Decomposition for Dense Tensors.**  
