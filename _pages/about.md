@@ -29,6 +29,7 @@ Efficient Tensor Analysis, Time Series Analysis
 \[C2\] **D-Tucker: Fast and Memory-Efficient Tucker Decomposition for Dense Tensors.**   
        **Jun-Gi Jang** and U Kang.  
        36th IEEE International Conference on Data Engineering ([ICDE](https://www.utdallas.edu/icde/)) 2020, Dallas, Texas, USA.
+       [[paper]](https://datalab.snu.ac.kr/dtucker/resources/paper.pdf) [[homepage]](https://datalab.snu.ac.kr/dtucker/)
 
 \[J2\] **S3CMTF: Fast, accurate, and scalable method for incomplete coupled matrix-tensor factorization.**   
        Dongjin Choi, **Jun-Gi Jang**, and U Kang.  
