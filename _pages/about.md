@@ -27,7 +27,7 @@ Seoul National University
 
 [C2] **D-Tucker: Fast and Memory-Efficient Tucker Decomposition for Dense Tensors.**
   **Jun-Gi Jang** and U Kang.
-  36th IEEE International Conference on Data Engineering ([ICDE](https://www.utdallas.edu/icde/)) 2020, Dallas, Texas, USA. (To appear)
+  36th IEEE International Conference on Data Engineering ([ICDE](https://www.utdallas.edu/icde/)) 2020, Dallas, Texas, USA.
 
 [J2] **S3CMTF: Fast, accurate, and scalable method for incomplete coupled matrix-tensor factorization.**
   Dongjin Choi, **Jun-Gi Jang**, and U Kang.
@@ -53,7 +53,7 @@ Samsung Electronics
 ### Conference Reviews
 * **CIKM** (International Conference on Information and Knowledge Management) [2018, 2019]
 * **ICDM** (International Conference on Data Mining) [2018]
-* **KDD** (International Conference on Knowledge Discovery and Data Mining) [2019]
+* **KDD** (International Conference on Knowledge Discovery and Data Mining) [2019, 2020]
 * **WWW** (International World Wide Web Conference) [2019]
 * **WSDM** (International Conference on Web Search and Data Mining) [2018, 2019]
 
