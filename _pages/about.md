@@ -26,6 +26,11 @@ Efficient Tensor Analysis, Time Series Analysis
 
 ## Publications
 
+\[C3\] **VeST: Very Sparse Tucker Factorization of Large-Scale Tensors.**   
+       Moonjeong Park\*, **Jun-Gi Jang\*** and U Kang (\* Equal contribution).  
+       VEST: Very Sparse Tucker Factorization of Large-Scale Tensors", IEEE International Conference on Big Data and Smart Computing (BigComp), 2021, Jeju Island, Korea.  
+       [[paper]](https://ieeexplore.ieee.org/document/9373235/) [[code]](https://github.com/leesael/VeST)
+
 \[C2\] **D-Tucker: Fast and Memory-Efficient Tucker Decomposition for Dense Tensors.**   
        **Jun-Gi Jang** and U Kang.  
        36th IEEE International Conference on Data Engineering ([ICDE](https://www.utdallas.edu/icde/)) 2020, Dallas, Texas, USA.
