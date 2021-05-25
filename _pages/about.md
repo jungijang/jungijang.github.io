@@ -26,6 +26,16 @@ Efficient Tensor Analysis, Time Series Analysis
 
 ## Publications
 
+### Conferences  
+
+\[C4\] **Fast and Memory-Efficient Tucker Decomposition for Answering Diverse Time Range Queries.**   
+       **Jun-Gi Jang** and U Kang.   
+       The 27th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining  (KDD), 2021, Online. (to appear)   
+
+\[C4\] **Fast and Accurate Partial Fourier Transform for Time Series Data.**   
+       Yong-chan Park, **Jun-Gi Jang**, and U Kang.   
+       The 27th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining  (KDD), 2021, Online. (to appear)   
+
 \[C3\] **VeST: Very Sparse Tucker Factorization of Large-Scale Tensors.**   
        Moonjeong Park\*, **Jun-Gi Jang\*** and U Kang (\* Equal contribution).  
        IEEE International Conference on Big Data and Smart Computing (BigComp), 2021, Jeju Island, Korea.  
@@ -36,6 +46,13 @@ Efficient Tensor Analysis, Time Series Analysis
        36th IEEE International Conference on Data Engineering ([ICDE](https://www.utdallas.edu/icde/)) 2020, Dallas, Texas, USA.
        [[paper]](https://datalab.snu.ac.kr/dtucker/resources/paper.pdf) [[homepage]](https://datalab.snu.ac.kr/dtucker/)
 
+\[C1\] **Zoom-SVD: Fast and Memory Efficient Method for Extracting Key Patterns in an Arbitrary Time Range.**   
+       **Jun-Gi Jang**, Dongjin Choi, Jinhong Jung, and U Kang.  
+       ACM International Conference on Information and Knowledge Management (CIKM) 2018, Lingotto, Turin, Italy.  
+       [[paper]](https://datalab.snu.ac.kr/~ukang/papers/zoomsvdCIKM18.pdf) [[bibtex]](https://datalab.snu.ac.kr/~ukang/papers/zoomsvdCIKM18.bib) [[homepage]](https://datalab.snu.ac.kr/zoomsvd/)
+
+### Journals 
+
 \[J2\] **S3CMTF: Fast, accurate, and scalable method for incomplete coupled matrix-tensor factorization.**   
        Dongjin Choi, **Jun-Gi Jang**, and U Kang.  
        PLOS ONE 14(6): e0217316.  
@@ -44,12 +61,9 @@ Efficient Tensor Analysis, Time Series Analysis
 \[J1\] **High-Performance Tucker Factorization on Heterogeneous Platforms.**   
        Sejoon Oh, Namyong Park, **Jun-Gi Jang**, Lee Sael, and U Kang.  
        IEEE Transactions on Parallel and Distributed Systems (TPDS), Apr. 1, 2019.  
-       [[paper]](https://github.com/sejoonoh/sejoonoh.github.io/blob/master/files/GTA_paper.pdf) [[bibtex]](https://github.com/sejoonoh/sejoonoh.github.io/blob/master/files/GTA.bib) [[code]](https://github.com/sejoonoh/GTA-Tensor)
+       [[paper]](https://github.com/sejoonoh/sejoonoh.github.io/blob/master/files/GTA_paper.pdf) [[bibtex]](https://github.com/sejoonoh/sejoonoh.github.io/blob/master/files/GTA.bib) [[code]](https://github.com/sejoonoh/GTA-Tensor)  
 
-\[C1\] **Zoom-SVD: Fast and Memory Efficient Method for Extracting Key Patterns in an Arbitrary Time Range.**   
-       **Jun-Gi Jang**, Dongjin Choi, Jinhong Jung, and U Kang.  
-       ACM International Conference on Information and Knowledge Management (CIKM) 2018, Lingotto, Turin, Italy.  
-       [[paper]](https://datalab.snu.ac.kr/~ukang/papers/zoomsvdCIKM18.pdf) [[bibtex]](https://datalab.snu.ac.kr/~ukang/papers/zoomsvdCIKM18.bib) [[homepage]](https://datalab.snu.ac.kr/zoomsvd/)
+
 ## Awards & Honors
 
 * **Humantech Paper Award, Honorable Mention** (Feb. 2018).
