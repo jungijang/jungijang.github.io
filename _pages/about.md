@@ -28,13 +28,13 @@ Efficient Tensor Analysis, Time Series Analysis
 
 ### Conferences  
 
-\[C4\] **Fast and Memory-Efficient Tucker Decomposition for Answering Diverse Time Range Queries.**   
+\[C5\] **Fast and Memory-Efficient Tucker Decomposition for Answering Diverse Time Range Queries.**   
        **Jun-Gi Jang** and U Kang.   
-       The 27th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining  (KDD), 2021, Online. (to appear)   
+       The 27th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining  (KDD), 2021, Virtual Event. (to appear)   
 
 \[C4\] **Fast and Accurate Partial Fourier Transform for Time Series Data.**   
        Yong-chan Park, **Jun-Gi Jang**, and U Kang.   
-       The 27th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining  (KDD), 2021, Online. (to appear)   
+       The 27th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining  (KDD), 2021, Virtual Event. (to appear)   
 
 \[C3\] **VeST: Very Sparse Tucker Factorization of Large-Scale Tensors.**   
        Moonjeong Park\*, **Jun-Gi Jang\*** and U Kang (\* Equal contribution).  
