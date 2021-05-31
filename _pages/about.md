@@ -37,7 +37,7 @@ Efficient Tensor Analysis, Time Series Analysis
        The 27th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining  ([KDD](https://www.kdd.org/kdd2021/)), 2021, Virtual Event. (to appear)   
 
 \[C3\] **VeST: Very Sparse Tucker Factorization of Large-Scale Tensors.**   
-       Moonjeong Park\*, **Jun-Gi Jang\*** and U Kang (\* Equal contribution).  
+       Moonjeong Park\*, **Jun-Gi Jang\*** and Lee Sael (\* Equal contribution).  
        IEEE International Conference on Big Data and Smart Computing ([BigComp](http://www.bigcomputing.org/)), 2021, Jeju Island, Korea.  
        [[paper]](https://ieeexplore.ieee.org/document/9373235/) [[code]](https://github.com/leesael/VeST)
 
