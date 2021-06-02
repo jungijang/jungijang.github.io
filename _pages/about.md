@@ -43,7 +43,7 @@ Efficient Tensor Analysis, Time Series Analysis
 
 \[C2\] **D-Tucker: Fast and Memory-Efficient Tucker Decomposition for Dense Tensors.**   
        **Jun-Gi Jang** and U Kang.  
-       36th IEEE International Conference on Data Engineering ([ICDE](https://www.utdallas.edu/icde/)) 2020, Dallas, Texas, USA.
+       36th IEEE International Conference on Data Engineering ([ICDE](https://www.utdallas.edu/icde/)) 2020, Dallas, Texas, USA.   
        [[paper]](https://datalab.snu.ac.kr/dtucker/resources/paper.pdf) [[bibtex]](https://datalab.snu.ac.kr/~ukang/papers/dtuckerICDE20.bib) [[homepage]](https://datalab.snu.ac.kr/dtucker/)
 
 \[C1\] **Zoom-SVD: Fast and Memory Efficient Method for Extracting Key Patterns in an Arbitrary Time Range.**   
