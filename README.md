@@ -1,1 +1,1 @@
-Fork from [academicpages](https://github.com/academicpages/academicpages.github.io)
+My hompage is based on [Plain-Academic Template](https://github.com/mavroudisv/plain-academic) made by Vasilios Mavroudis.
