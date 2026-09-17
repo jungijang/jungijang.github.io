@@ -17,14 +17,24 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --accent: #2563eb;
-      --accent-light: #eff6ff;
-      --text: #1e293b;
-      --muted: #64748b;
-      --border: #e2e8f0;
-      --bg: #f8fafc;
+      /* Seoul National University identity colors (identity.snu.ac.kr/color/1) */
+      --snu-gray: #666666;      /* Sub: Pantone Cool Gray 10C, RGB 102,102,102 */
+      --snu-silver: #8a8d8f;    /* Sub: Pantone 877C (metallic, screen approx.) */
+
+      --accent: #1c2069;        /* SNU Blue (Pantone 2748C) with saturation reduced for screen */
+      --link: #2e328a;
+      --hover-bg: #f6f6f8;
+      --pastel: #e9ebf7;        /* soft SNU-blue tint: navbar */
+      --pastel-border: #dcdff0;
+      --pastel-line: #c7cbea;   /* section underlines */
+      --pastel-dot: #9fa6d8;    /* separators */
+      --nav-text: #4a4f7a;
+      --heading: #2b2f3a;       /* titles and bold text (charcoal) */
+      --text: #3a3d46;          /* body text */
+      --muted: var(--snu-gray);
+      --border: #e5e5ea;
+      --bg: #ffffff;
       --white: #ffffff;
-      --red: #e03a3a;
     }
 
     html { scroll-behavior: smooth; }
@@ -37,32 +47,30 @@
       background: var(--bg);
     }
 
-    a { color: var(--accent); text-decoration: none; }
+    a { color: var(--link); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    strong { font-weight: 700; }
+    strong { font-weight: 600; color: var(--heading); }
 
     /* Paper title (first <strong> in a pub entry) */
-    .full-pub > strong:first-child,
-    .pub-item p > strong:first-of-type {
-      font-weight: 800;
-      color: #0f172a;
+    .full-pub > strong:first-of-type {
+      font-weight: 700;
+      color: var(--heading);
     }
     /* Jun-Gi Jang name emphasis */
-    .full-pub strong.me,
-    .pub-item strong.me {
-      font-weight: 700;
-      color: #1d4ed8;
+    .full-pub strong.me {
+      font-weight: 600;
+      color: var(--heading);
     }
 
     /* ── Navbar ── */
     .navbar {
-      background: #0f172a;
+      background: var(--pastel);
       padding: 0;
       position: sticky;
       top: 0;
       z-index: 100;
-      box-shadow: 0 1px 3px rgba(0,0,0,.3);
+      box-shadow: 0 1px 0 var(--pastel-border);
     }
     .navbar-inner {
       max-width: 1000px;
@@ -76,7 +84,7 @@
     .navbar-brand {
       font-family: 'Oswald', sans-serif;
       font-size: 18px;
-      color: #f1f5f9;
+      color: var(--accent);
       letter-spacing: .3px;
     }
     .navbar-links {
@@ -85,12 +93,12 @@
       list-style: none;
     }
     .navbar-links a {
-      color: #94a3b8;
+      color: var(--nav-text);
       font-size: 13px;
       font-weight: 500;
       transition: color .15s;
     }
-    .navbar-links a:hover { color: #f1f5f9; text-decoration: none; }
+    .navbar-links a:hover { color: var(--accent); text-decoration: none; }
 
     /* ── Page wrapper ── */
     .page {
@@ -111,7 +119,7 @@
       font-family: 'Oswald', sans-serif;
       font-size: 26px;
       font-weight: 700;
-      color: var(--text);
+      color: var(--heading);
       margin-bottom: 14px;
       line-height: 1.2;
     }
@@ -145,7 +153,7 @@
     .profile-links a {
       font-size: 13px;
       font-weight: 500;
-      color: var(--accent);
+      color: var(--link);
       display: flex;
       align-items: center;
       gap: 6px;
@@ -171,8 +179,7 @@
       border-radius: 12px;
       padding: 24px 28px;
       margin-bottom: 32px;
-      text-align: justify;
-      color: var(--text);
+      color: #2f323b;
       font-size: 14.5px;
     }
 
@@ -183,9 +190,9 @@
       font-family: 'Oswald', sans-serif;
       font-size: 18px;
       font-weight: 600;
-      color: #0f172a;
+      color: var(--heading);
       letter-spacing: .2px;
-      border-bottom: 2px solid var(--accent);
+      border-bottom: 2px solid var(--pastel-line);
       padding-bottom: 6px;
       margin-bottom: 18px;
       display: flex;
@@ -197,61 +204,65 @@
     .interest-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 4px 10px;
     }
     .interest-tag {
-      background: var(--accent-light);
-      color: var(--accent);
-      border: 1px solid #bfdbfe;
-      padding: 4px 12px;
-      border-radius: 999px;
-      font-size: 12.5px;
-      font-weight: 500;
-    }
-
-    /* selected publications */
-    .pub-item {
-      padding: 14px 16px;
-      margin-bottom: 14px;
-      border-left: 3px solid #dbe4ff;
-      background: var(--white);
-      border-radius: 0 8px 8px 0;
-      border-top: 1px solid var(--border);
-      border-right: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-    .pub-item p { margin: 0; font-size: 14px; line-height: 1.65; }
-
-    .pub-tag {
-      display: inline-block;
-      padding: 2px 9px;
-      margin-bottom: 7px;
-      border-radius: 999px;
-      font-size: 11.5px;
+      color: var(--heading);
+      font-size: 14px;
       font-weight: 600;
+    }
+    .recruit-tag + .recruit-tag::before {
+      content: '·';
+      margin-right: 12px;
+      color: var(--pastel-dot);
+      font-weight: 800;
+    }
+    .interest-tag + .interest-tag::before {
+      content: '·';
+      margin-right: 10px;
+      color: var(--snu-silver);
+      font-weight: 400;
+    }
+
+    /* recruiting callout */
+    .recruiting {
+      margin-bottom: 36px;
+      font-size: 14.5px;
+      line-height: 1.7;
+    }
+
+    .recruit-topics {
+      margin: 16px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px 12px;
+    }
+    .recruit-tag {
+      color: var(--heading);
+      font-size: 14.5px;
+      font-weight: 600;
+      letter-spacing: -.01em;
       white-space: nowrap;
     }
 
-    .item-query  { border-left-color: #818cf8; }
-    .tag-query   { background: #eef2ff; color: #4338ca; }
-
-    .item-mining { border-left-color: #22d3ee; }
-    .tag-mining  { background: #ecfeff; color: #0e7490; }
-
-    .item-stream { border-left-color: #34d399; }
-    .tag-stream  { background: #f0fdf4; color: #065f46; }
-
-    .item-ai     { border-left-color: #fb923c; }
-    .tag-ai      { background: #fff7ed; color: #9a3412; }
+    /* publication numbering */
+    .pub-num {
+      position: absolute;
+      left: 0;
+      top: 1px;
+      width: 38px;
+      text-align: right;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--snu-silver);
+      font-variant-numeric: tabular-nums;
+      user-select: none;
+    }
 
     .award-badge {
-      display: inline-block;
-      background: #fff1f1;
-      color: var(--red);
-      border: 1px solid #fecaca;
-      padding: 1px 8px;
-      border-radius: 4px;
-      font-size: 11.5px;
+      color: var(--heading);
+      font-size: 13px;
       font-weight: 600;
     }
     .award-badge a { color: inherit; }
@@ -273,14 +284,19 @@
     }
     .timeline-body { flex: 1; }
 
-    /* awards / fellowships list */
+    /* awards list */
     .award-list { list-style: none; display: flex; flex-direction: column; gap: 7px; }
     .award-list li { font-size: 14px; padding-left: 14px; position: relative; }
+    .award-group + .award-group {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid #eeeef1;
+    }
     .award-list li::before {
       content: '·';
       position: absolute;
       left: 0;
-      color: var(--accent);
+      color: var(--snu-silver);
       font-weight: 700;
     }
 
@@ -289,17 +305,23 @@
     .service-list p { margin: 0; }
 
     /* full pub list */
-    .full-pub { font-size: 14px; margin-bottom: 18px; line-height: 1.65; }
+    .full-pub {
+      position: relative;
+      padding-left: 50px;
+      font-size: 14px;
+      margin-bottom: 18px;
+      line-height: 1.65;
+    }
     .full-pub .pub-links { margin-top: 4px; display: flex; gap: 8px; flex-wrap: wrap; }
     .pub-link {
       font-size: 12px;
       font-weight: 500;
-      color: var(--accent);
-      border: 1px solid #bfdbfe;
+      color: var(--link);
+      border: 1px solid var(--border);
       border-radius: 4px;
       padding: 1px 8px;
     }
-    .pub-link:hover { background: var(--accent-light); text-decoration: none; }
+    .pub-link:hover { background: var(--hover-bg); text-decoration: none; }
 
     /* footer */
     .footer {
@@ -308,10 +330,10 @@
       padding: 16px 24px;
       border-top: 1px solid var(--border);
       font-size: 12px;
-      color: #b0bac5;
+      color: var(--snu-silver);
       text-align: right;
     }
-    .footer a { color: #b0bac5; }
+    .footer a { color: var(--snu-silver); }
 
     /* Scroll offset for sticky navbar */
     section[id] { scroll-margin-top: 64px; }
@@ -327,16 +349,16 @@
       user-select: none;
       list-style: none;
       padding: 10px 14px;
-      background: var(--accent-light);
-      border: 1px solid #bfdbfe;
+      background: var(--white);
+      border: 1px solid var(--border);
       border-radius: 8px;
       font-size: 14px;
       font-weight: 600;
-      color: var(--accent);
+      color: var(--heading);
       transition: background .15s;
     }
     .pub-details summary::-webkit-details-marker { display: none; }
-    .pub-details summary:hover { background: #dbeafe; }
+    .pub-details summary:hover { background: var(--hover-bg); }
 
     .pub-details summary::before {
       content: '▶';
@@ -351,7 +373,7 @@
       border-bottom-color: transparent;
     }
     .pub-details-body {
-      border: 1px solid #bfdbfe;
+      border: 1px solid var(--border);
       border-top: none;
       border-radius: 0 0 8px 8px;
       padding: 20px 20px 8px;
@@ -374,11 +396,11 @@
       display: block;
       width: 22px;
       height: 2px;
-      background: #94a3b8;
+      background: var(--nav-text);
       border-radius: 2px;
       transition: all .2s;
     }
-    .nav-toggle:hover span { background: #f1f5f9; }
+    .nav-toggle:hover span { background: var(--accent); }
     /* Animated X when open */
     .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
     .nav-toggle.open span:nth-child(2) { opacity: 0; }
@@ -389,6 +411,10 @@
       .page { flex-direction: column; gap: 32px; }
       .sidebar { flex: none; width: 100%; display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; }
       .profile-photo { width: 120px; height: 120px; }
+      .full-pub { padding-left: 34px; }
+      .recruit-topics { flex-direction: column; align-items: center; gap: 4px; }
+      .recruit-tag + .recruit-tag::before { content: none; }
+      .pub-num { width: 26px; }
       .timeline-item { flex-direction: column; gap: 2px; }
       .timeline-date { flex: none; }
 
@@ -402,11 +428,11 @@
         right: 0;
         flex-direction: column;
         gap: 0;
-        background: #0f172a;
-        border-top: 1px solid #1e293b;
+        background: var(--pastel);
+        border-top: 1px solid var(--pastel-border);
         padding: 6px 0 14px;
         z-index: 200;
-        box-shadow: 0 4px 12px rgba(0,0,0,.4);
+        box-shadow: 0 6px 12px rgba(28, 32, 105, .08);
       }
       .navbar-links.open { display: flex; }
       .navbar-links li a {
@@ -427,12 +453,12 @@
       <span></span><span></span><span></span>
     </button>
     <ul class="navbar-links" id="navbar-links">
+      <li><a href="#join">Join</a></li>
       <li><a href="#research">Research</a></li>
-      <li><a href="#selected-publications">Selected Pubs.</a></li>
-      <li><a href="#full-publications">Full Pub. List</a></li>
       <li><a href="#positions">Positions</a></li>
       <li><a href="#awards">Awards</a></li>
       <li><a href="#service">Service</a></li>
+      <li><a href="#publications">Publications</a></li>
     </ul>
   </div>
 </nav>
@@ -461,12 +487,27 @@
 
     <!-- Bio -->
     <div class="bio">
-      I am an Assistant Professor in the Graduate School of Data Science at Seoul National University, with a joint appointment at SNU College. Before joining SNU, I was an Assistant Professor at DGIST and a postdoctoral researcher at the University of Illinois Urbana-Champaign, where I worked with <a href="http://tonghanghang.org/">Prof. Hanghang Tong</a>.
-      I received my Ph.D. in Computer Science and Engineering from Seoul National University, where I was advised by <a href="https://datalab.snu.ac.kr/~ukang/">Prof. U Kang</a>.
+      I am an Assistant Professor in the Graduate School of Data Science at Seoul National University, with a joint appointment at SNU College. Before joining SNU, I was an Assistant Professor at DGIST and a postdoctoral researcher at the University of Illinois Urbana-Champaign, where I worked with <a href="http://tonghanghang.org/">Prof.&nbsp;Hanghang&nbsp;Tong</a>.
+      I received my Ph.D. in Computer Science and Engineering from Seoul National University, where I was advised by <a href="https://datalab.snu.ac.kr/~ukang/">Prof.&nbsp;U&nbsp;Kang</a>.
       I also received my B.S. in Mechanical and Aerospace Engineering from Seoul National University, with a double major in Computer Science and Engineering.
       My research focuses on data mining, query-aware data systems, streaming and adaptive computation, and applied AI.
       I have received best paper awards, including the Best Research Paper Award at KDD 2021 and the Best Paper Award Honorable Mention at ICDE 2022.
     </div>
+
+    <!-- Recruiting -->
+    <section class="section recruiting" id="join">
+      <h2 class="section-title">Prospective Students</h2>
+      I am <strong>actively looking for motivated students and researchers</strong> to join my group at SNU GSDS &mdash;
+      <strong>undergraduate research interns</strong>, <strong>M.S.</strong>, <strong>M.S.&ndash;Ph.D. integrated</strong>, <strong>Ph.D.</strong>, and <strong>postdoctoral researchers</strong>.
+      Research topics in my group include, but are not limited to:
+      <div class="recruit-topics">
+        <span class="recruit-tag">Time Series</span>
+        <span class="recruit-tag">Graphs &amp; Tensors</span>
+        <span class="recruit-tag">Decomposition &amp; Compression</span>
+        <span class="recruit-tag">Retrieval &amp; Discovery</span>
+      </div>
+      Please email me at <strong>jungijang at snu.ac.kr</strong> with your CV and a short note on what you would like to work on.
+    </section>
 
     <!-- Research Interests -->
     <section class="section" id="research">
@@ -477,97 +518,6 @@
         <span class="interest-tag">Streaming &amp; Adaptive Computation</span>
         <span class="interest-tag">Applied AI</span>
       </div>
-    </section>
-
-    <!-- Selected Publications -->
-    <section class="section" id="selected-publications">
-      <h2 class="section-title">Selected Publications</h2>
-
-      <div class="pub-item item-query">
-        <p>
-          <span class="pub-tag tag-query">Query-Aware Data Systems</span><br>
-          <strong>SCOUT: Coupling-Free Bounds for Trillion-Scale Top-k Retrieval in Sparse Tensor Factorization</strong><br>
-          <strong class="me">Jun-Gi Jang</strong>, Hyunsik Yoo, Ruizhong Qiu, Yinglong Xia, and Hanghang Tong<br>
-          <a href="https://2027.sigmod.org/">SIGMOD 2027</a>, Huntington Beach, CA, USA. (To Appear)
-        </p>
-      </div>
-
-      <div class="pub-item item-mining">
-        <p>
-          <span class="pub-tag tag-mining">Data Mining</span><br>
-          <strong>DuET: Dual-View Tensor-to-Topology Spectral Adapter for Enhancing Sparse Tensor Factorization</strong><br>
-          <strong class="me">Jun-Gi Jang</strong>, Jingrui He, Andrew J Margenot, Hanghang Tong<br>
-          <a href="https://kdd2026.kdd.org/">KDD 2026</a>, Jeju, South Korea &nbsp;·&nbsp;
-            <a href="https://jungijang.github.io/resources/2026/KDD/duet.pdf">[paper]</a>
-        </p>
-      </div>
-
-      <div class="pub-item item-mining">
-        <p>
-          <span class="pub-tag tag-mining">Data Mining</span><br>
-          <strong>ProgNet: Program-Grounded Evidence Composition for Interpretable Graph Classification</strong><br>
-          Minseok Jeon, Seunghyun Park, <strong class="me">Jun-Gi Jang</strong> (Corresponding)<br>
-          <a href="https://kdd2026.kdd.org/">KDD 2026</a>, Jeju, South Korea &nbsp;·&nbsp;
-          <a href="https://jungijang.github.io/resources/2026/KDD/prognet.pdf">[paper]</a>
-        </p>
-      </div>        
-        
-      <div class="pub-item item-query">
-        <p>
-          <span class="pub-tag tag-query">Query-Aware Data Systems</span><br>
-          <strong>TUCKET: A Tensor Time Series Data Structure for Efficient and Accurate Factor Analysis over Time Ranges</strong><br>
-          Ruizhong Qiu*, <strong class="me">Jun-Gi Jang*</strong>, Xiao Lin, Lihui Liu, Hanghang Tong (* equal contribution)<br>
-          <a href="https://vldb.org/2025/">VLDB 2025</a>, London, United Kingdom &nbsp;·&nbsp;
-          <a href="https://www.arxiv.org/pdf/2501.06647">[paper]</a> &nbsp;·&nbsp;
-          <a href="https://github.com/q-rz/TUCKET">[code]</a>
-        </p>
-      </div>
-
-      <div class="pub-item item-stream">
-        <p>
-          <span class="pub-tag tag-stream">Streaming &amp; Adaptive Computation</span><br>
-          <strong>Fast and Accurate Dual-Way Streaming PARAFAC2 for Irregular Tensors - Algorithm and Application</strong><br>
-          <strong class="me">Jun-Gi Jang</strong>, Jeongyoung Lee, Yong-chan Park, and U Kang<br>
-          <a href="https://kdd.org/kdd2023/">KDD 2023</a>, Long Beach, CA, USA &nbsp;·&nbsp;
-          <a href="https://arxiv.org/abs/2305.18376">[paper]</a> &nbsp;·&nbsp;
-          <a href="https://github.com/snudatalab/Dash">[code]</a>
-        </p>
-      </div>        
-
-      <div class="pub-item item-mining">
-        <p>
-          <span class="pub-tag tag-mining">Data Mining</span><br>
-          <strong>DPar2: Fast and Scalable PARAFAC2 Decomposition for Irregular Dense Tensors</strong><br>
-          <strong class="me">Jun-Gi Jang</strong> and U Kang<br>
-          <a href="https://icde2022.ieeecomputer.my/">ICDE 2022</a>, Virtual Event &nbsp;·&nbsp;
-          <span class="award-badge">Best Paper Honorable Mention</span> &nbsp;·&nbsp;
-          <a href="https://arxiv.org/pdf/2203.12798.pdf">[paper]</a> &nbsp;·&nbsp;
-          <a href="https://datalab.snu.ac.kr/dpar2/">[homepage &amp; code]</a>
-        </p>
-      </div>        
-        
-      <div class="pub-item item-query">
-        <p>
-          <span class="pub-tag tag-query">Query-Aware Data Systems</span><br>
-          <strong>Fast and Memory-Efficient Tucker Decomposition for Answering Diverse Time Range Queries</strong><br>
-          <strong class="me">Jun-Gi Jang</strong> and U Kang<br>
-          <a href="https://www.kdd.org/kdd2021/">KDD 2021</a>, Virtual Event &nbsp;·&nbsp;
-          <span class="award-badge">Best Research Paper</span> &nbsp;·&nbsp;
-          <a href="https://jungijang.github.io/resources/2021/KDD/zoomtucker.pdf">[paper]</a> &nbsp;·&nbsp;
-          <a href="https://datalab.snu.ac.kr/zoomtucker/">[homepage &amp; code]</a>
-        </p>
-      </div>
-
-<!--       <div class="pub-item item-ai">
-        <p>
-          <span class="pub-tag tag-ai">Applied AI</span><br>
-          <strong>Accurate Open-set Recognition for Memory Workload</strong><br>
-          <strong class="me">Jun-Gi Jang</strong>, Sooyeon Shim, Vladimir Egay, Jeeyong Lee, Jongmin Park, Suhyun Chae, and U Kang<br>
-          TKDD, 2023 &nbsp;·&nbsp;
-          <a href="https://dl.acm.org/doi/10.1145/3597027">[paper]</a> &nbsp;·&nbsp;
-          <a href="https://github.com/snudatalab/Acorn">[code]</a>
-        </p>
-      </div> -->
     </section>
 
     <!-- Positions -->
@@ -636,30 +586,26 @@
       </div>
     </section>
 
-    <!-- Awards -->
+    <!-- Awards & Honors -->
     <section class="section" id="awards">
-      <h2 class="section-title">Awards</h2>
-      <ul class="award-list">
-        <li><a href="https://cse.snu.ac.kr/node/61858"><strong>Best Thesis Award</strong></a>, CSE, SNU. Feb. 2023</li>
-        <li><a href="https://icde2022.ieeecomputer.my/best-papers/"><strong>Best Paper Award, Honorable Mention</strong></a>, <a href="https://icde2022.ieeecomputer.my/">ICDE</a>. 2022</li>
+      <h2 class="section-title">Awards &amp; Honors</h2>
+      <ul class="award-list award-group">
         <li><strong>Best Paper Award, Best Research Paper</strong>, <a href="https://www.kdd.org/kdd2021/">KDD</a>. 2021</li>
+        <li><a href="https://icde2022.ieeecomputer.my/best-papers/"><strong>Best Paper Award, Honorable Mention</strong></a>, <a href="https://icde2022.ieeecomputer.my/">ICDE</a>. 2022</li>
         <li><a href="http://bigcomputing.org/conf2021/awards.html"><strong>Best Paper Award, 1st Place</strong></a>, <a href="http://www.bigcomputing.org/">BigComp</a>. 2021</li>
-        <li><strong>SNU BK21 Star Researcher Award</strong>, BK 21. Feb. 2022</li>
-        <li><strong>BK21 Best Graduate Student Award</strong>, BK 21. Feb. 2022</li>
         <li><a href="https://humantech.samsung.com/saitext/index.jsp"><strong>Humantech Paper Award, Honorable Mention</strong></a>, Samsung Electronics. Feb. 2018</li>
       </ul>
-    </section>
-
-    <!-- Fellowships -->
-    <section class="section" id="fellowships">
-      <h2 class="section-title">Fellowships</h2>
-      <ul class="award-list">
-        <li><strong>Postdoctoral Fellowship Program</strong>, National Research Foundation of Korea. 2023 – 2024</li>
-        <li><strong>Future Gauss Lecture Program</strong>, Gauss Labs. Feb. 2022</li>
-        <li><strong>Naver Ph.D. Fellowship</strong>, Naver. Dec. 2021</li>
+      <ul class="award-list award-group">
         <li><a href="https://www.qualcomm.com/research/research/university-relations/innovation-fellowship/2021-south-korea"><strong>Qualcomm Innovation Fellowship</strong></a>, Qualcomm. Nov. 2021</li>
+        <li><strong>Naver Ph.D. Fellowship</strong>, Naver. Dec. 2021</li>
+        <li><strong>Postdoctoral Fellowship Program</strong>, National Research Foundation of Korea. 2023 – 2024</li>
         <li><a href="https://aiis.snu.ac.kr/bbs/board.php?bo_table=eng4_3"><strong>Yulchon AI Star Fellowship</strong></a>, Yulchon Foundation, Nongshim Group. Sep. 2021</li>
-        <!-- <li><strong>Lecture/Research Scholarship</strong>, Seoul National University. Mar. 2019 – Aug. 2021</li> -->
+        <li><strong>Future Gauss Lecture Program</strong>, Gauss Labs. Feb. 2022</li>
+      </ul>
+      <ul class="award-list award-group">
+        <li><a href="https://cse.snu.ac.kr/node/61858"><strong>Best Thesis Award</strong></a>, CSE, SNU. Feb. 2023</li>
+        <li><strong>SNU BK21 Star Researcher Award</strong>, BK 21. Feb. 2022</li>
+        <li><strong>BK21 Best Graduate Student Award</strong>, BK 21. Feb. 2022</li>
       </ul>
     </section>
 
@@ -667,27 +613,25 @@
     <section class="section" id="service">
       <h2 class="section-title">Professional Service</h2>
       <div class="service-list">
-        <p><strong>Area Chair</strong>: KDD 2026</p>
+        <p><strong>Area Chair</strong>: KDD 2026, 2027</p>
         <p><strong>Program Committee / Reviewer</strong>: KDD, WWW, CIKM, SDM, AAAI, TKDE, KAIS, TPDS, and others</p>
         <p><strong>Workshop Organizing Committees</strong>: Interplay Between Classical Tensor Methods And Foundation Models, 2026</p>
       </div>
     </section>
 
-    <!-- Full Publication List -->
-    <section class="section" id="full-publications">
-      <h2 class="section-title">Full Publication List</h2>
-
-      <details class="pub-details">
-        <summary>Click to expand</summary>
-        <div class="pub-details-body">
+    <!-- Publications -->
+    <section class="section" id="publications">
+      <h2 class="section-title">Publications</h2>
 
       <div class="full-pub">
+        <span class="pub-num">[28]</span>
         <strong>SCOUT: Coupling-Free Bounds for Trillion-Scale Top-k Retrieval in Sparse Tensor Factorization</strong><br>
         <strong class="me">Jun-Gi Jang</strong>, Hyunsik Yoo, Ruizhong Qiu, Yinglong Xia, and Hanghang Tong<br>
         <a href="https://2027.sigmod.org/">SIGMOD</a>, 2027, Huntington Beach, CA, USA. (To Appear)       
       </div>
 
       <div class="full-pub">
+        <span class="pub-num">[27]</span>
         <strong>DuET: Dual-View Tensor-to-Topology Spectral Adapter for Enhancing Sparse Tensor Factorization</strong><br>
         <strong class="me">Jun-Gi Jang</strong>, Jingrui He, Andrew J Margenot, Hanghang Tong<br>
         <a href="https://kdd2026.kdd.org/">KDD</a>, 2026, Jeju, South Korea.
@@ -695,17 +639,19 @@
           <a class="pub-link" href="https://jungijang.github.io/resources/2026/KDD/duet.pdf">paper</a>
         </div>        
       </div>
-            
+
       <div class="full-pub">
+        <span class="pub-num">[26]</span>
         <strong>ProgNet: Program-Grounded Evidence Composition for Interpretable Graph Classification</strong><br>
-        Minseok Jeon, Seunghyun Park, <strong class="me">Jun-Gi Jang</strong><br>
+        Minseok Jeon, Seunghyun Park, <strong class="me">Jun-Gi Jang</strong> (Corresponding)<br>
         <a href="https://kdd2026.kdd.org/">KDD</a>, 2026, Jeju, South Korea.
         <div class="pub-links">
           <a class="pub-link" href="https://jungijang.github.io/resources/2026/KDD/prognet.pdf">paper</a>
         </div>                
       </div>
-            
+
       <div class="full-pub">
+        <span class="pub-num">[25]</span>
         <strong>Fast and Accurate Domain Adaptation for Irregular and Regular Tensor Decomposition</strong><br>
         Junghun Kim, Ka Hyun Park, <strong class="me">Jun-Gi Jang</strong>, and U Kang<br>
         IEEE Transactions on Knowledge and Data Engineering (TKDE), 2026.
@@ -715,6 +661,7 @@
       </div>
 
       <div class="full-pub">
+        <span class="pub-num">[24]</span>
         <strong>Improving Group Fairness in Tensor Completion via Imbalance Mitigating Entity Augmentation</strong><br>
         Dawon Ahn*, <strong class="me">Jun-Gi Jang*</strong>, Evangelos E. Papalexakis (*equal contribution)<br>
         <a href="https://pakdd2025.org/">PAKDD</a>, 2025, Sydney, Australia.
@@ -725,6 +672,7 @@
       </div>
 
       <div class="full-pub">
+        <span class="pub-num">[23]</span>
         <strong>TUCKET: A Tensor Time Series Data Structure for Efficient and Accurate Factor Analysis over Time Ranges</strong><br>
         Ruizhong Qiu*, <strong class="me">Jun-Gi Jang*</strong>, Xiao Lin, Lihui Liu, Hanghang Tong (*equal contribution)<br>
         <a href="https://vldb.org/2025/">VLDB 2025</a>, London, United Kingdom.
@@ -735,6 +683,7 @@
       </div>
 
       <div class="full-pub">
+        <span class="pub-num">[22]</span>
         <strong>Compact Lossy Compression of Tensors via Neural Tensor-Train Decomposition</strong><br>
         Taehyung Kwon, Jihoon Ko, Jinhong Jung, <strong class="me">Jun-Gi Jang</strong>, and Kijung Shin<br>
         Knowledge and Information Systems (KAIS), Springer, 2024.
@@ -746,6 +695,7 @@
       </div>
 
       <div class="full-pub">
+        <span class="pub-num">[21]</span>
         <strong>Fast and Accurate PARAFAC2 Decomposition for Time Range Queries on Irregular Tensors</strong><br>
         <strong class="me">Jun-Gi Jang</strong>, Yong-chan Park, and U Kang<br>
         <a href="https://cikm2024.org/">CIKM</a>, 2024, Boise, Idaho, USA.
@@ -757,6 +707,7 @@
       </div>
 
       <div class="full-pub">
+        <span class="pub-num">[20]</span>
         <strong>Fast and Accurate Domain Adaptation for Irregular Tensor Decomposition</strong><br>
         Junghun Kim, Ka Hyun Park, <strong class="me">Jun-Gi Jang</strong>, and U Kang<br>
         <a href="https://kdd.org/kdd2024/">KDD</a>, 2024, Barcelona, Spain.
@@ -768,6 +719,7 @@
       </div>
 
       <div class="full-pub">
+        <span class="pub-num">[19]</span>
         <strong>Compact Decomposition of Irregular Tensors for Data Compression: From Sparse to Dense to High-Order Tensors</strong><br>
         Taehyung Kwon, Jihoon Ko, Jinhong Jung, <strong class="me">Jun-Gi Jang</strong>, and Kijung Shin<br>
         <a href="https://kdd.org/kdd2024/">KDD</a>, 2024, Barcelona, Spain.
@@ -778,212 +730,233 @@
         </div>
       </div>
 
-      <div class="full-pub">
-        <strong>Fast and Accurate Dual-Way Streaming PARAFAC2 for Irregular Tensors - Algorithm and Application</strong><br>
-        <strong class="me">Jun-Gi Jang</strong>, Jeongyoung Lee, Yong-chan Park, and U Kang<br>
-        <a href="https://kdd.org/kdd2023/">KDD</a>, 2023, Long Beach, CA, USA.
-        <div class="pub-links">
-          <a class="pub-link" href="https://arxiv.org/abs/2305.18376">paper</a>
-          <a class="pub-link" href="https://github.com/snudatalab/Dash">code</a>
-          <a class="pub-link" href="https://dblp.org/rec/conf/kdd/JangLPK23.html?view=bibtex">bib</a>
-        </div>
-      </div>
+      <details class="pub-details">
+        <summary>Show 18 earlier publications (2018&ndash;2023)</summary>
+        <div class="pub-details-body">
 
-      <div class="full-pub">
-        <strong>Accurate Open-set Recognition for Memory Workload</strong><br>
-        <strong class="me">Jun-Gi Jang</strong>, Sooyeon Shim, Vladimir Egay, Jeeyong Lee, Jongmin Park, Suhyun Chae, and U Kang<br>
-        ACM Transactions on Knowledge Discovery from Data (TKDD), 2023.
-        <div class="pub-links">
-          <a class="pub-link" href="https://dl.acm.org/doi/10.1145/3597027">paper</a>
-          <a class="pub-link" href="https://github.com/snudatalab/Acorn">code</a>
-          <a class="pub-link" href="https://dblp.uni-trier.de/rec/journals/corr/abs-2212-08817.html?view=bibtex">bib</a>
-        </div>
-      </div>
+          <div class="full-pub">
+            <span class="pub-num">[18]</span>
+            <strong>Fast and Accurate Dual-Way Streaming PARAFAC2 for Irregular Tensors - Algorithm and Application</strong><br>
+            <strong class="me">Jun-Gi Jang</strong>, Jeongyoung Lee, Yong-chan Park, and U Kang<br>
+            <a href="https://kdd.org/kdd2023/">KDD</a>, 2023, Long Beach, CA, USA.
+            <div class="pub-links">
+              <a class="pub-link" href="https://arxiv.org/abs/2305.18376">paper</a>
+              <a class="pub-link" href="https://github.com/snudatalab/Dash">code</a>
+              <a class="pub-link" href="https://dblp.org/rec/conf/kdd/JangLPK23.html?view=bibtex">bib</a>
+            </div>
+          </div>
 
-      <div class="full-pub">
-        <strong>Fast and accurate interpretation of workload classification model</strong><br>
-        Sooyeon Shim, Doyeon Kim, <strong class="me">Jun-Gi Jang</strong>, Suhyun Chae, Jeeyong Lee, and U Kang<br>
-        PLOS ONE, 2023.
-        <div class="pub-links">
-          <a class="pub-link" href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0282595">paper</a>
-          <a class="pub-link" href="https://github.com/snudatalab/INFO">code</a>
-          <a class="pub-link" href="https://datalab.snu.ac.kr/~ukang/papers/infoPLOS23.bib">bib</a>
-        </div>
-      </div>
+          <div class="full-pub">
+            <span class="pub-num">[17]</span>
+            <strong>Accurate Open-set Recognition for Memory Workload</strong><br>
+            <strong class="me">Jun-Gi Jang</strong>, Sooyeon Shim, Vladimir Egay, Jeeyong Lee, Jongmin Park, Suhyun Chae, and U Kang<br>
+            ACM Transactions on Knowledge Discovery from Data (TKDD), 2023.
+            <div class="pub-links">
+              <a class="pub-link" href="https://dl.acm.org/doi/10.1145/3597027">paper</a>
+              <a class="pub-link" href="https://github.com/snudatalab/Acorn">code</a>
+              <a class="pub-link" href="https://dblp.uni-trier.de/rec/journals/corr/abs-2212-08817.html?view=bibtex">bib</a>
+            </div>
+          </div>
 
-      <div class="full-pub">
-        <strong>Accurate Bundle Matching and Generation via Multitask Learning with Partially Shared Parameters</strong><br>
-        Hyunsik Jeon, <strong class="me">Jun-Gi Jang</strong>, Taehun Kim, and U Kang<br>
-        PLOS ONE, 2023.
-        <div class="pub-links">
-          <a class="pub-link" href="https://arxiv.org/pdf/2210.15460.pdf">paper</a>
-          <a class="pub-link" href="https://github.com/snudatalab/BundleMage">code</a>
-          <a class="pub-link" href="https://dblp.org/rec/journals/corr/abs-2210-15460.html?view=bib">bib</a>
-        </div>
-      </div>
+          <div class="full-pub">
+            <span class="pub-num">[16]</span>
+            <strong>Fast and accurate interpretation of workload classification model</strong><br>
+            Sooyeon Shim, Doyeon Kim, <strong class="me">Jun-Gi Jang</strong>, Suhyun Chae, Jeeyong Lee, and U Kang<br>
+            PLOS ONE, 2023.
+            <div class="pub-links">
+              <a class="pub-link" href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0282595">paper</a>
+              <a class="pub-link" href="https://github.com/snudatalab/INFO">code</a>
+              <a class="pub-link" href="https://datalab.snu.ac.kr/~ukang/papers/infoPLOS23.bib">bib</a>
+            </div>
+          </div>
 
-      <div class="full-pub">
-        <strong>Falcon: lightweight and accurate convolution based on depthwise separable convolution</strong><br>
-        <strong class="me">Jun-Gi Jang*</strong>, Chun Quan*, Hyun Dong Lee, and U Kang (*equal contribution)<br>
-        Knowledge and Information Systems (KAIS), Springer, 2023.
-        <div class="pub-links">
-          <a class="pub-link" href="https://link.springer.com/article/10.1007/s10115-022-01818-x">paper</a>
-          <a class="pub-link" href="https://github.com/snudatalab/FALCON">code</a>
-          <a class="pub-link" href="https://dblp.uni-trier.de/rec/journals/kais/JangQLK23.html?view=bibtex">bib</a>
-        </div>
-      </div>
+          <div class="full-pub">
+            <span class="pub-num">[15]</span>
+            <strong>Accurate Bundle Matching and Generation via Multitask Learning with Partially Shared Parameters</strong><br>
+            Hyunsik Jeon, <strong class="me">Jun-Gi Jang</strong>, Taehun Kim, and U Kang<br>
+            PLOS ONE, 2023.
+            <div class="pub-links">
+              <a class="pub-link" href="https://arxiv.org/pdf/2210.15460.pdf">paper</a>
+              <a class="pub-link" href="https://github.com/snudatalab/BundleMage">code</a>
+              <a class="pub-link" href="https://dblp.org/rec/journals/corr/abs-2210-15460.html?view=bib">bib</a>
+            </div>
+          </div>
 
-      <div class="full-pub">
-        <strong>Accurate PARAFAC2 Decomposition for Temporal Irregular Tensors with Missing Values</strong><br>
-        <strong class="me">Jun-Gi Jang</strong>, Jeongyoung Lee, Jiwon Park, and U Kang<br>
-        <a href="https://bigdataieee.org/BigData2022/index.html">IEEE BigData</a>, 2022, Osaka, Japan.
-        <div class="pub-links">
-          <a class="pub-link" href="https://jungijang.github.io/resources/2022/BigData/atom.pdf">paper</a>
-          <a class="pub-link" href="https://datalab.snu.ac.kr/atom/">homepage &amp; code</a>
-          <a class="pub-link" href="https://jungijang.github.io/resources/2022/BigData/JangLPK22.bib">bib</a>
-          <a class="pub-link" href="https://jungijang.github.io/resources/2022/BigData/atom_bigdata.pdf">slide</a>
-        </div>
-      </div>
+          <div class="full-pub">
+            <span class="pub-num">[14]</span>
+            <strong>Falcon: lightweight and accurate convolution based on depthwise separable convolution</strong><br>
+            <strong class="me">Jun-Gi Jang*</strong>, Chun Quan*, Hyun Dong Lee, and U Kang (*equal contribution)<br>
+            Knowledge and Information Systems (KAIS), Springer, 2023.
+            <div class="pub-links">
+              <a class="pub-link" href="https://link.springer.com/article/10.1007/s10115-022-01818-x">paper</a>
+              <a class="pub-link" href="https://github.com/snudatalab/FALCON">code</a>
+              <a class="pub-link" href="https://dblp.uni-trier.de/rec/journals/kais/JangQLK23.html?view=bibtex">bib</a>
+            </div>
+          </div>
 
-      <div class="full-pub">
-        <strong>DPar2: Fast and Scalable PARAFAC2 Decomposition for Irregular Dense Tensors</strong><br>
-        <strong class="me">Jun-Gi Jang</strong> and U Kang<br>
-        <a href="https://icde2022.ieeecomputer.my">ICDE</a>, 2022, Virtual Event. &nbsp;
-        <span class="award-badge"><a href="https://icde2022.ieeecomputer.my/best-papers/">Best Paper Award, Honorable Mention</a></span>
-        <div class="pub-links">
-          <a class="pub-link" href="https://arxiv.org/pdf/2203.12798.pdf">paper</a>
-          <a class="pub-link" href="https://datalab.snu.ac.kr/dpar2/">homepage &amp; code</a>
-          <a class="pub-link" href="https://jungijang.github.io/resources/2022/ICDE/JangK22.bib">bib</a>
-          <a class="pub-link" href="https://jungijang.github.io/resources/2022/ICDE/dpar2_icde22.pdf">slide</a>
-        </div>
-      </div>
+          <div class="full-pub">
+            <span class="pub-num">[13]</span>
+            <strong>Accurate PARAFAC2 Decomposition for Temporal Irregular Tensors with Missing Values</strong><br>
+            <strong class="me">Jun-Gi Jang</strong>, Jeongyoung Lee, Jiwon Park, and U Kang<br>
+            <a href="https://bigdataieee.org/BigData2022/index.html">IEEE BigData</a>, 2022, Osaka, Japan.
+            <div class="pub-links">
+              <a class="pub-link" href="https://jungijang.github.io/resources/2022/BigData/atom.pdf">paper</a>
+              <a class="pub-link" href="https://datalab.snu.ac.kr/atom/">homepage &amp; code</a>
+              <a class="pub-link" href="https://jungijang.github.io/resources/2022/BigData/JangLPK22.bib">bib</a>
+              <a class="pub-link" href="https://jungijang.github.io/resources/2022/BigData/atom_bigdata.pdf">slide</a>
+            </div>
+          </div>
 
-      <div class="full-pub">
-        <strong>Static and Streaming Tucker Decomposition for Dense Tensors</strong><br>
-        <strong class="me">Jun-Gi Jang</strong> and U Kang<br>
-        ACM Transactions on Knowledge Discovery from Data (TKDD), Oct., 2022. <em>(Extended version of C2)</em>
-        <div class="pub-links">
-          <a class="pub-link" href="https://dl.acm.org/doi/10.1145/3568682">paper</a>
-          <a class="pub-link" href="https://datalab.snu.ac.kr/dtucker/">homepage &amp; code</a>
-          <a class="pub-link" href="https://dblp.uni-trier.de/rec/journals/tkdd/JangK23.html?view=bibtex">bib</a>
-        </div>
-      </div>
+          <div class="full-pub">
+            <span class="pub-num">[12]</span>
+            <strong>DPar2: Fast and Scalable PARAFAC2 Decomposition for Irregular Dense Tensors</strong><br>
+            <strong class="me">Jun-Gi Jang</strong> and U Kang<br>
+            <a href="https://icde2022.ieeecomputer.my">ICDE</a>, 2022, Virtual Event. &nbsp;
+            <span class="award-badge"><a href="https://icde2022.ieeecomputer.my/best-papers/">Best Paper Award, Honorable Mention</a></span>
+            <div class="pub-links">
+              <a class="pub-link" href="https://arxiv.org/pdf/2203.12798.pdf">paper</a>
+              <a class="pub-link" href="https://datalab.snu.ac.kr/dpar2/">homepage &amp; code</a>
+              <a class="pub-link" href="https://jungijang.github.io/resources/2022/ICDE/JangK22.bib">bib</a>
+              <a class="pub-link" href="https://jungijang.github.io/resources/2022/ICDE/dpar2_icde22.pdf">slide</a>
+            </div>
+          </div>
 
-      <div class="full-pub">
-        <strong>Large-scale Tucker Tensor Factorization for Sparse and Accurate Decomposition</strong><br>
-        <strong class="me">Jun-Gi Jang*</strong>, Moonjeong Park*, Jongwuk Lee, and Lee Sael (*equal contribution)<br>
-        The Journal of Supercomputing, May, 2022. <em>(Extended version of C3)</em>
-        <div class="pub-links">
-          <a class="pub-link" href="https://link.springer.com/article/10.1007/s11227-022-04559-4">paper</a>
-          <a class="pub-link" href="https://dblp.uni-trier.de/rec/journals/tjs/JangPLS22.html?view=bibtex">bib</a>
-        </div>
-      </div>
+          <div class="full-pub">
+            <span class="pub-num">[11]</span>
+            <strong>Static and Streaming Tucker Decomposition for Dense Tensors</strong><br>
+            <strong class="me">Jun-Gi Jang</strong> and U Kang<br>
+            ACM Transactions on Knowledge Discovery from Data (TKDD), Oct., 2022. <em>(Extended version of C2)</em>
+            <div class="pub-links">
+              <a class="pub-link" href="https://dl.acm.org/doi/10.1145/3568682">paper</a>
+              <a class="pub-link" href="https://datalab.snu.ac.kr/dtucker/">homepage &amp; code</a>
+              <a class="pub-link" href="https://dblp.uni-trier.de/rec/journals/tkdd/JangK23.html?view=bibtex">bib</a>
+            </div>
+          </div>
 
-      <div class="full-pub">
-        <strong>Finding Key Structures in MMORPG Graph with Hierarchical Graph Summarization</strong><br>
-        <strong class="me">Jun-Gi Jang</strong>, Chaeheum Park, Changwon Jang, Geonsoo Kim, and U Kang<br>
-        ACM Transactions on Knowledge Discovery from Data (TKDD), Feb., 2022.
-        <div class="pub-links">
-          <a class="pub-link" href="https://dl.acm.org/doi/10.1145/3522691">paper</a>
-          <a class="pub-link" href="https://dblp.uni-trier.de/rec/journals/tkdd/JangPJKK22.html?view=bibtex">bib</a>
-        </div>
-      </div>
+          <div class="full-pub">
+            <span class="pub-num">[10]</span>
+            <strong>Large-scale Tucker Tensor Factorization for Sparse and Accurate Decomposition</strong><br>
+            <strong class="me">Jun-Gi Jang*</strong>, Moonjeong Park*, Jongwuk Lee, and Lee Sael (*equal contribution)<br>
+            The Journal of Supercomputing, May, 2022. <em>(Extended version of C3)</em>
+            <div class="pub-links">
+              <a class="pub-link" href="https://link.springer.com/article/10.1007/s11227-022-04559-4">paper</a>
+              <a class="pub-link" href="https://dblp.uni-trier.de/rec/journals/tjs/JangPLS22.html?view=bibtex">bib</a>
+            </div>
+          </div>
 
-      <div class="full-pub">
-        <strong>Fast and Memory-Efficient Tucker Decomposition for Answering Diverse Time Range Queries</strong><br>
-        <strong class="me">Jun-Gi Jang</strong> and U Kang<br>
-        <a href="https://www.kdd.org/kdd2021/">KDD</a>, 2021, Virtual Event. &nbsp;
-        <span class="award-badge"><a href="https://www.kdd.org/kdd2021/">Best Paper Award, Best Research Paper</a></span>
-        <div class="pub-links">
-          <a class="pub-link" href="https://jungijang.github.io/resources/2021/KDD/zoomtucker.pdf">paper</a>
-          <a class="pub-link" href="https://datalab.snu.ac.kr/zoomtucker/">homepage &amp; code</a>
-          <a class="pub-link" href="https://jungijang.github.io/resources/2021/KDD/JangK21.bib">bib</a>
-          <a class="pub-link" href="https://jungijang.github.io/resources/2021/KDD/zoomtucker_slide.pdf">slide</a>
-        </div>
-      </div>
+          <div class="full-pub">
+            <span class="pub-num">[9]</span>
+            <strong>Finding Key Structures in MMORPG Graph with Hierarchical Graph Summarization</strong><br>
+            <strong class="me">Jun-Gi Jang</strong>, Chaeheum Park, Changwon Jang, Geonsoo Kim, and U Kang<br>
+            ACM Transactions on Knowledge Discovery from Data (TKDD), Feb., 2022.
+            <div class="pub-links">
+              <a class="pub-link" href="https://dl.acm.org/doi/10.1145/3522691">paper</a>
+              <a class="pub-link" href="https://dblp.uni-trier.de/rec/journals/tkdd/JangPJKK22.html?view=bibtex">bib</a>
+            </div>
+          </div>
 
-      <div class="full-pub">
-        <strong>Fast and Accurate Partial Fourier Transform for Time Series Data</strong><br>
-        Yong-chan Park, <strong class="me">Jun-Gi Jang</strong>, and U Kang<br>
-        <a href="https://www.kdd.org/kdd2021/">KDD</a>, 2021, Virtual Event.
-        <div class="pub-links">
-          <a class="pub-link" href="https://jungijang.github.io/resources/2021/KDD/pft.pdf">paper</a>
-          <a class="pub-link" href="https://github.com/snudatalab/PFT">code</a>
-          <a class="pub-link" href="https://jungijang.github.io/resources/2021/KDD/ParkJK21.bib">bib</a>
-          <a class="pub-link" href="https://jungijang.github.io/resources/2021/KDD/pft_slide.pdf">slide</a>
-        </div>
-      </div>
+          <div class="full-pub">
+            <span class="pub-num">[8]</span>
+            <strong>Fast and Memory-Efficient Tucker Decomposition for Answering Diverse Time Range Queries</strong><br>
+            <strong class="me">Jun-Gi Jang</strong> and U Kang<br>
+            <a href="https://www.kdd.org/kdd2021/">KDD</a>, 2021, Virtual Event. &nbsp;
+            <span class="award-badge"><a href="https://www.kdd.org/kdd2021/">Best Paper Award, Best Research Paper</a></span>
+            <div class="pub-links">
+              <a class="pub-link" href="https://jungijang.github.io/resources/2021/KDD/zoomtucker.pdf">paper</a>
+              <a class="pub-link" href="https://datalab.snu.ac.kr/zoomtucker/">homepage &amp; code</a>
+              <a class="pub-link" href="https://jungijang.github.io/resources/2021/KDD/JangK21.bib">bib</a>
+              <a class="pub-link" href="https://jungijang.github.io/resources/2021/KDD/zoomtucker_slide.pdf">slide</a>
+            </div>
+          </div>
 
-      <div class="full-pub">
-        <strong>VeST: Very Sparse Tucker Factorization of Large-Scale Tensors</strong><br>
-        Moonjeong Park*, <strong class="me">Jun-Gi Jang*</strong> and Lee Sael (*equal contribution)<br>
-        <a href="http://www.bigcomputing.org/">BigComp</a>, 2021, Jeju Island, Korea. &nbsp;
-        <span class="award-badge"><a href="http://bigcomputing.org/conf2021/awards.html">Best Paper Award, 1st Place</a></span>
-        <div class="pub-links">
-          <a class="pub-link" href="https://jungijang.github.io/resources/2021/BIGCOMP/vest.pdf">paper</a>
-          <a class="pub-link" href="https://github.com/leesael/VeST">homepage &amp; code</a>
-          <a class="pub-link" href="https://jungijang.github.io/resources/2021/BIGCOMP/ParkJS21.bib">bib</a>
-        </div>
-      </div>
+          <div class="full-pub">
+            <span class="pub-num">[7]</span>
+            <strong>Fast and Accurate Partial Fourier Transform for Time Series Data</strong><br>
+            Yong-chan Park, <strong class="me">Jun-Gi Jang</strong>, and U Kang<br>
+            <a href="https://www.kdd.org/kdd2021/">KDD</a>, 2021, Virtual Event.
+            <div class="pub-links">
+              <a class="pub-link" href="https://jungijang.github.io/resources/2021/KDD/pft.pdf">paper</a>
+              <a class="pub-link" href="https://github.com/snudatalab/PFT">code</a>
+              <a class="pub-link" href="https://jungijang.github.io/resources/2021/KDD/ParkJK21.bib">bib</a>
+              <a class="pub-link" href="https://jungijang.github.io/resources/2021/KDD/pft_slide.pdf">slide</a>
+            </div>
+          </div>
 
-      <div class="full-pub">
-        <strong>Time-aware tensor decomposition for sparse tensors</strong><br>
-        Dawon Ahn, <strong class="me">Jun-Gi Jang</strong>, and U Kang<br>
-        Machine Learning, Sep. 2021.
-        <div class="pub-links">
-          <a class="pub-link" href="http://link.springer.com/article/10.1007/s10994-021-06059-7">paper</a>
-          <a class="pub-link" href="https://github.com/snudatalab/TATD/">code</a>
-          <a class="pub-link" href="https://datalab.snu.ac.kr/~ukang/papers/tatdML22.bib">bib</a>
-        </div>
-      </div>
+          <div class="full-pub">
+            <span class="pub-num">[6]</span>
+            <strong>VeST: Very Sparse Tucker Factorization of Large-Scale Tensors</strong><br>
+            Moonjeong Park*, <strong class="me">Jun-Gi Jang*</strong> and Lee Sael (*equal contribution)<br>
+            <a href="http://www.bigcomputing.org/">BigComp</a>, 2021, Jeju Island, Korea. &nbsp;
+            <span class="award-badge"><a href="http://bigcomputing.org/conf2021/awards.html">Best Paper Award, 1st Place</a></span>
+            <div class="pub-links">
+              <a class="pub-link" href="https://jungijang.github.io/resources/2021/BIGCOMP/vest.pdf">paper</a>
+              <a class="pub-link" href="https://github.com/leesael/VeST">homepage &amp; code</a>
+              <a class="pub-link" href="https://jungijang.github.io/resources/2021/BIGCOMP/ParkJS21.bib">bib</a>
+            </div>
+          </div>
 
-      <div class="full-pub">
-        <strong>D-Tucker: Fast and Memory-Efficient Tucker Decomposition for Dense Tensors</strong><br>
-        <strong class="me">Jun-Gi Jang</strong> and U Kang<br>
-        <a href="https://icde.utdallas.edu/">ICDE</a>, 2020, Dallas, Texas, USA.
-        <div class="pub-links">
-          <a class="pub-link" href="https://jungijang.github.io/resources/2020/ICDE/dtucker.pdf">paper</a>
-          <a class="pub-link" href="https://datalab.snu.ac.kr/dtucker/">homepage &amp; code</a>
-          <a class="pub-link" href="https://jungijang.github.io/resources/2020/ICDE/JangK20.bib">bib</a>
-        </div>
-      </div>
+          <div class="full-pub">
+            <span class="pub-num">[5]</span>
+            <strong>Time-aware tensor decomposition for sparse tensors</strong><br>
+            Dawon Ahn, <strong class="me">Jun-Gi Jang</strong>, and U Kang<br>
+            Machine Learning, Sep. 2021.
+            <div class="pub-links">
+              <a class="pub-link" href="http://link.springer.com/article/10.1007/s10994-021-06059-7">paper</a>
+              <a class="pub-link" href="https://github.com/snudatalab/TATD/">code</a>
+              <a class="pub-link" href="https://datalab.snu.ac.kr/~ukang/papers/tatdML22.bib">bib</a>
+            </div>
+          </div>
 
-      <div class="full-pub">
-        <strong>S3CMTF: Fast, accurate, and scalable method for incomplete coupled matrix-tensor factorization</strong><br>
-        Dongjin Choi, <strong class="me">Jun-Gi Jang</strong>, and U Kang<br>
-        PLOS ONE, 2019.
-        <div class="pub-links">
-          <a class="pub-link" href="https://jungijang.github.io/resources/2019/PLOSONE/pone.0217316.pdf">paper</a>
-          <a class="pub-link" href="https://datalab.snu.ac.kr/S3CMTF/">homepage &amp; code</a>
-          <a class="pub-link" href="https://jungijang.github.io/resources/2019/PLOSONE/ChoiJK19.bib">bib</a>
-        </div>
-      </div>
+          <div class="full-pub">
+            <span class="pub-num">[4]</span>
+            <strong>D-Tucker: Fast and Memory-Efficient Tucker Decomposition for Dense Tensors</strong><br>
+            <strong class="me">Jun-Gi Jang</strong> and U Kang<br>
+            <a href="https://icde.utdallas.edu/">ICDE</a>, 2020, Dallas, Texas, USA.
+            <div class="pub-links">
+              <a class="pub-link" href="https://jungijang.github.io/resources/2020/ICDE/dtucker.pdf">paper</a>
+              <a class="pub-link" href="https://datalab.snu.ac.kr/dtucker/">homepage &amp; code</a>
+              <a class="pub-link" href="https://jungijang.github.io/resources/2020/ICDE/JangK20.bib">bib</a>
+            </div>
+          </div>
 
-      <div class="full-pub">
-        <strong>High-Performance Tucker Factorization on Heterogeneous Platforms</strong><br>
-        Sejoon Oh, Namyong Park, <strong class="me">Jun-Gi Jang</strong>, Lee Sael, and U Kang<br>
-        IEEE Transactions on Parallel and Distributed Systems (TPDS), Apr. 2019.
-        <div class="pub-links">
-          <a class="pub-link" href="https://jungijang.github.io/resources/2019/TPDS/gtaTPDS19.pdf">paper</a>
-          <a class="pub-link" href="https://github.com/sejoonoh/GTA-Tensor">code</a>
-          <a class="pub-link" href="https://jungijang.github.io/resources/2019/TPDS/OhPJSK19.bib">bib</a>
-        </div>
-      </div>
+          <div class="full-pub">
+            <span class="pub-num">[3]</span>
+            <strong>S3CMTF: Fast, accurate, and scalable method for incomplete coupled matrix-tensor factorization</strong><br>
+            Dongjin Choi, <strong class="me">Jun-Gi Jang</strong>, and U Kang<br>
+            PLOS ONE, 2019.
+            <div class="pub-links">
+              <a class="pub-link" href="https://jungijang.github.io/resources/2019/PLOSONE/pone.0217316.pdf">paper</a>
+              <a class="pub-link" href="https://datalab.snu.ac.kr/S3CMTF/">homepage &amp; code</a>
+              <a class="pub-link" href="https://jungijang.github.io/resources/2019/PLOSONE/ChoiJK19.bib">bib</a>
+            </div>
+          </div>
 
-      <div class="full-pub">
-        <strong>Zoom-SVD: Fast and Memory Efficient Method for Extracting Key Patterns in an Arbitrary Time Range</strong><br>
-        <strong class="me">Jun-Gi Jang</strong>, Dongjin Choi, Jinhong Jung, and U Kang<br>
-        <a href="https://www.cikm2018.units.it/">CIKM</a>, 2018, Turin, Italy.
-        <div class="pub-links">
-          <a class="pub-link" href="https://jungijang.github.io/resources/2018/CIKM/zoomsvd.pdf">paper</a>
-          <a class="pub-link" href="https://datalab.snu.ac.kr/zoomsvd/">homepage &amp; code</a>
-          <a class="pub-link" href="https://jungijang.github.io/resources/2018/CIKM/JangCJK18.bib">bib</a>
-        </div>
-      </div>
+          <div class="full-pub">
+            <span class="pub-num">[2]</span>
+            <strong>High-Performance Tucker Factorization on Heterogeneous Platforms</strong><br>
+            Sejoon Oh, Namyong Park, <strong class="me">Jun-Gi Jang</strong>, Lee Sael, and U Kang<br>
+            IEEE Transactions on Parallel and Distributed Systems (TPDS), Apr. 2019.
+            <div class="pub-links">
+              <a class="pub-link" href="https://jungijang.github.io/resources/2019/TPDS/gtaTPDS19.pdf">paper</a>
+              <a class="pub-link" href="https://github.com/sejoonoh/GTA-Tensor">code</a>
+              <a class="pub-link" href="https://jungijang.github.io/resources/2019/TPDS/OhPJSK19.bib">bib</a>
+            </div>
+          </div>
+
+          <div class="full-pub">
+            <span class="pub-num">[1]</span>
+            <strong>Zoom-SVD: Fast and Memory Efficient Method for Extracting Key Patterns in an Arbitrary Time Range</strong><br>
+            <strong class="me">Jun-Gi Jang</strong>, Dongjin Choi, Jinhong Jung, and U Kang<br>
+            <a href="https://www.cikm2018.units.it/">CIKM</a>, 2018, Turin, Italy.
+            <div class="pub-links">
+              <a class="pub-link" href="https://jungijang.github.io/resources/2018/CIKM/zoomsvd.pdf">paper</a>
+              <a class="pub-link" href="https://datalab.snu.ac.kr/zoomsvd/">homepage &amp; code</a>
+              <a class="pub-link" href="https://jungijang.github.io/resources/2018/CIKM/JangCJK18.bib">bib</a>
+            </div>
+          </div>
 
         </div><!-- /.pub-details-body -->
       </details>
-
     </section>
 
   </main>
